@@ -3,8 +3,8 @@ package com.hamza.characterapp.data.model
 
 import com.google.gson.annotations.SerializedName
 
-data class CharacterModel(
-    @SerializedName("info") val info: Info, @SerializedName("results") val results: List<Result>
+data class CharacterResponse(
+    @SerializedName("info") val info: Info, @SerializedName("results") val results: List<Character>
 ) {
     data class Info(
         @SerializedName("count") val count: Int,
@@ -13,7 +13,7 @@ data class CharacterModel(
         @SerializedName("prev") val prev: Any
     )
 
-    data class Result(
+    data class Character(
         @SerializedName("created") val created: String,
         @SerializedName("episode") val episode: List<String>,
         @SerializedName("gender") val gender: String,
