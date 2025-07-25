@@ -5,7 +5,7 @@ plugins {
 
 android {
     namespace = "com.hamza.characterapp"
-    compileSdk = 34
+    compileSdk = 35
 
     defaultConfig {
         applicationId = "com.hamza.characterapp"
