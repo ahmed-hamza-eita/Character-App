@@ -1,7 +1,8 @@
-package com.hamza.characterapp
+package com.hamza.characterapp.ui
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import com.hamza.characterapp.R
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint

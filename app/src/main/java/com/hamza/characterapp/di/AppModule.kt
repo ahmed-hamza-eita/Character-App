@@ -1,12 +1,12 @@
 package com.hamza.characterapp.di
 
+import com.hamza.characterapp.data.repositories.CharacterRepository
 import com.hamza.characterapp.data.retrofit.ApiCalls
 import com.hamza.characterapp.data.retrofit.RetrofitConnection
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
 import dagger.hilt.components.SingletonComponent
-import retrofit2.Retrofit
 import javax.inject.Singleton
 
 
@@ -20,4 +20,8 @@ object AppModule {
     @Singleton
     fun provideRetrofit(): ApiCalls = RetrofitConnection.getRetrofit(BASE_URL)
 
+
+    @Singleton
+    @Provides
+    fun provideCharacterRepository(api: ApiCalls) = CharacterRepository(api)
 }
